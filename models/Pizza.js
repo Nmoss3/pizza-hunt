@@ -1,6 +1,6 @@
-const { Schema, Model } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const PizzaChema = new Schema({
+const PizzaSchema = new Schema({
   pizzaName: {
     type: String,
   },
@@ -18,8 +18,6 @@ const PizzaChema = new Schema({
   toppings: [],
 });
 
-// create the Pizza Model using the PizzaSchema
 const Pizza = model("Pizza", PizzaSchema);
 
-// export the Pizza model
 module.exports = Pizza;
